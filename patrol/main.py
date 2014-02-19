@@ -146,7 +146,7 @@ class MainHandler(Handler):
         
         query_time = str(round(time.time() - TIME['start'],1))
 
-        self.render('result.html', worst=worst, bad=bad, good=good, url=domain, page_url=page_url, results=everything, threshold=threshold, time=query_time)
+        self.render('results.html', worst=worst, bad=bad, good=good, url=domain, page_url=page_url, results=everything, threshold=threshold, time=query_time)
         
 class TagHandler(Handler):
         

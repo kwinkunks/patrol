@@ -3,80 +3,19 @@
   {% block content %}
     
 <div class="container">
-      <div class="row">  <!-- start row-fluid -->
-        <div class="col-md-8"> <!-- start container -->
-
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Get new pages from...</h3>
-            </div>
-        
-            <div class="panel-body">
-
-              <form action="result" method="POST" id="form-inline" class="form-horizontal" role="form">
-
-            <div class="form-group">
-              <label for="url" class="col-sm-3 control-label">Wiki</label>
-              <div class="col-sm-9">
-                <input name="url" type="text" placeholder="http://www.subsurfwiki.org/mediawiki/api.php" class="form-control">
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <label for="categories" class="col-sm-3 control-label">Categories</label>
-              <div class="col-sm-9">
-                <textarea name="categories" rows="3" placeholder="All pages... or enter one category per line" class="form-control"></textarea>
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <label for="threshold" class="col-sm-3 control-label">Threshold</label>
-              <div class="col-sm-3">
-                <input name="threshold" type="text" placeholder="10" class="form-control">
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <label for="days" class="col-sm-3 control-label">Number of days</label>
-              <div class="col-sm-3">
-                <input name="days" type="text" placeholder="14" class="form-control">
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <div class="col-sm-offset-3 col-sm-9">
-                <button type="submit" id="getpages" class="btn btn-primary" data-loading-text="Finding pages..." autocomplete="off">
-                  Find new pages
-                </button> <span class="label label-success"> <span class="glyphicon glyphicon-arrow-left"></span> <em>Don't know where to start? Just hit this.</em></span>
-              </div>
-            </div>
-          
-           </form>
-        
-            </div> <!-- end of panel body -->
-            
-          </div> <!-- end of panel -->
-          
-        </div> <!-- end of left column -->
-        
-        <div class="col-md-4"> <!-- start right col -->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">What is this?</h3>
-            </div>
-          
-            <div class="panel-body">
-                <p><strong>Patrol</strong> is a tool for keeping track of new pages in wikis. </p>
-                <p>Give the URL of the wiki, including the full path to the <strong>api.php</strong> interface.</p> 
-                <p>If the app takes too long to run, ask for fewer days, or decrease the threshold. Pages are scored out of 20.</p>
-            </div>
-          
-          </div> <!-- end of panel -->
-          
-        </div> <!-- end of right column -->
-
-        </div> 
-        </div> <!-- end row-fluid -->
+<div class="jumbotron">
+  <h2>Patrol your wiki!</h2>
+  <p>This is a tool for keeping track of new pages in MediaWiki wikis. It visits all of the recent additions to a wiki, ignoring redirects and subpages, and scores them on things like how many categories they have, how many figures and references, and how long they are. The maximum score is 20.</p>
+  <p>Once you have some results, you decide what to do with the worst pages: visit them, edit them (if you're logged in to the wiki), or tag them with a 'quality' tag. </p>
+  <p>If you have ideas for new features, please send them along to <a href="mailto:matt@agilegeoscience.com?subject=Patrol%20app">matt@agilegeoscience.com</a></p>
+  <p>&nbsp;</p>
+  <form action="result" method="POST" id="form-inline" class="form-horizontal" role="form">
+	<button type="submit" id="getpages" class="btn btn-primary" data-loading-text="Finding pages..." autocomplete="off">
+	  Try it right now
+	</button>
+  </form>
+ 
+</div>
 </div> <!-- end container -->
     
     <script>
