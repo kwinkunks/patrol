@@ -174,7 +174,7 @@ app = WSGIApplication([
 ], debug = True)
 
 def main():
-    httpserver.serve(app, host='127.0.0.1', port='8081')
+    httpserver.serve(app, host=config['host'], port=config['port'])
 
 if __name__ == '__main__':
     main()
