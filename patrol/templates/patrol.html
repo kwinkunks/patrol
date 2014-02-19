@@ -47,7 +47,7 @@
               <div class="col-sm-offset-3 col-sm-9">
                 <button type="submit" id="getpages" class="btn btn-primary" data-loading-text="Finding pages..." autocomplete="off">
                   Find new pages
-                </button> <span class="label label-success"> <span class="glyphicon glyphicon-arrow-left"></span> <em>Don't know where to start? Just hit this.</em></span>
+                </button> <span id="quickstart" class="label label-success"> <span class="glyphicon glyphicon-arrow-left"></span> <em>Don't know where to start? Just hit this.</em></span>
               </div>
             </div>
           
@@ -83,7 +83,8 @@
     
       $("#getpages").on('click', function(){
         var btn = $(this);
-        btn.button('loading');                          
+        btn.button('loading');
+        $("#quickstart").hide();
       });
 
       $(window).on('unload', function(){
